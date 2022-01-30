@@ -1,121 +1,42 @@
-# dio-desafio-git-primeiro-repositorio
-primeiro Projeto
-Repositorio criado para o desafio do Projet
+📚Desafio de Projeto sobre Git/Github da DIO
+Repositório criado para o desafio de projeto, incluir todas as atividades da Digital Innovation One - DIO, executados pelo Bootcamp Eduzz Fullsatck Developer.
 
-## Links uteis
-https://www.markdownguide.org/
+🔑Algumas Coisas Importantes
+Comandos importantes do Prompt de Comando (também utilizado no Git):
 
-A primeira coisa que voce deve fazer depois de instalar o Git é definir seu usarname e email. 
-$ git config --global user.name "John Doe"
-$ git config --global user.email johndoe@example.com
-Entre no diretório que deseja controlar a versão e inicie o Git assim: git init
+cls(win), clear(git, linux) - para apagar todo o histórico de comandos do prompt;
 
-Feito isso, seus arquivos ainda não estão sendo versionados, mas eles estão esperando para serem adicionados no estágio de controle. Para fazer isso digite o comando
-git add nome-do-arquivo-incluindo-extensão
+cd(win, git, linux) - para se transitar entre as pastas dos diretórios, também há a variante "cd .." para retornar à pasta anterior;
 
-Se você precisa adicionar todos os arquivos do diretório, basta digitar:
-git add .
+dir(win), ls(git, linux) - para mostrar a lista de diretórios contidos na pasta em que estiver, também há a variante dir -a(win), ls -a(git, linux) para mostrar inclusive os diretórios ocultos ;
 
-Saber o status do projeto:
-git status
+mkdir(win, git, linux) - para criar uma pasta no diretório;
 
-Voltando ao estágio anterior do adicionamento:
-git reset HEAD nome-do-arquivo
+echo(win, git, linux) - retorna o que for inserido, entretanto se utilizado como "echo > nome.extensão", ele cria o arquivo na extensão desejada, ótimo para criar um readme bem rápido sem sair do git em?! :happy:
 
-Commit – Comitando:
-git commit -m "Mensagem do commit"
+start(win, git, linux) - inicia um arquivo executável de qualquer tipo;
 
-Adicionando e comitando ao mesmo tempo:
-git commit -a -m "Mensagem do commit"
+TAB - Sim, a tecla TAB tem a incrível função de abreviar algo que você deseja escrever, extremamente útil e vai agilizar muito a sua vida!
 
-Voltando commits a versões anteriores.Voltar um commit:
-git reset HEAD~1
+Comandos de iniciação do Git:
 
-Voltar dois commits:
-git reset HEAD~2
+git init - inicia o versionamento na pasta em que estiver;
+git config --global user.email "email" - configura o ambiente de versionamento para todos os repositórios, com essa identificação de e-mail; em caso da necessidade de alterar isso posteriormente, use git config --global unset user.email;
+git config --global user.name "username" - configura o ambiente de versionamento para todos os repositórios, com essa identificação de usuário no github (é importante ressaltar que os dados aqui, devem refletir o usuário no Github); em caso da necessidade de alterar isso posteriormente, use git config --global unset user.name
+git config --list - mostra todos os parâmetros da configuração atual do Git; para sair, use a tecla q;
+git remote add nome (link) - direciona seu repositório local para um repositório na nuvem, o parâmetro NOME é apenas um apelido para que você possa referenciar o link sem tê-lo que mencionar novamente; você também pode posteriormente utilizar o comando git remote -v para consultar o repositório que está recebendo os arquivos locais.
+A configuração do ambient com Git/Github com chave SSH:
 
-Voltando um commit e deixando o arquivo no estagio anterior:
-git reset HEAD~1 --soft
+Use o código abaixo no Git, para gerar uma chave SSH;
 
-Voltando um commit e excluindo o arquivo, deixando no estágio anterior:
-git reset HEAD~1 --hard
+$ ssh-keygen -t ed25519 -C "seu_email@example.com"
+cat (chave gerada) - use esse comando (git, linux) para "ler" o conteúdo da chave, em seguida vá até a página principal no Github>settings>SSH and GPG keys>New SSH key em seguida insira o seu conteúdo da chave no campo "key".
 
-Verificando o histórico de commits:
-git log
+Calma que ainda não acabou!😆 Agora no Git Bash, você precisa executar o agente para que gerencie suas chaves.
 
-Verificando o que foi mudado, diferença entre um arquivo e outro:
-git log -p
+$ eval "$(ssh-agent -s)"
+A saída do comando será "> Agent pid (número_qualquer)", o agente continuará executando em segundo plano. Agora como última etapa, você deve passar a chave privada para o agent com o seguinte código:
 
-Verificando os 2 últimos commits:
-git log -p -2
+$ ssh-add "chave privada"
+Pronto!🤝 Agora você pode usar todas as funcionalidades do git sem precisar se identificar o tempo todo.
 
-Mostrando as estatísticas de todos os commits:
-git log --stat
-
-Mostrando todos os commits, cada um em uma linha:
-git log --pretty=oneline
-
-Mostrando todos os commits dos últimos 2 dias até o momento atual
-git log --since=2.days
-
-Criando um branch – uma ramificação
-git checkout -b nome-do-branch
-
-Verificando em que branch você está
-git branch
-
-Voltando para o branch master
-git checkout master
-
-Jogando o branch criado no branch master
-
-Entre como branch master:
-git merge nome-do-branch-que-foi-criado
-
-Removendo um branch:
-git branch -D nome-do-branch
-
-Deletando arquivos:
-
-git rm nome-do-arquivo
-Deletando todos os aquivos removidos ao mesmo tempo:
-
-git ls-files --deleted | xargs git rm
-Clonando e puxando alterações de projetos
-Clonando um projeto remoto:
-git clone url-do-projeto
-
-Fazendo um clone de outros branchs:
-git checkout -b nome-do-branch origin/ nome-do-branch
-
-Trazendo, puxando as alterações feitas por outros usuários:
-git pull origin master
-
-Sincronizando tudo que está no repositório remoto:
-git pull
-
-Enviando o(s) projeto(s), arquivo(s) para o repositório:
-
-git push origin master
-Enviando um branch para o repositório:
-
-git push origin nome-do-branch
-Tags
-As tags servem para marcar uma etapa. Imagine que você vai lançar uma versão, que resolve uma série de problemas. Você pode marcar aquela etapa criando uma tag. Assim fica simples de fazer qualquer rollback do projeto para uma tag específica em vez de voltar para um commit. Você sabe que tudo o que foi feito até aquela tag está funcionando.
-
-Criando tags:
-
-git tag versão-da-tag
-Listando tags:
-
-git tag -l
-Enviando a tag para o repositório
-
-git push origin master --tags
-Removendo as tags criadas localmente:
-
-git tag -d versão-da-tag
-Removendo tag no repositório remoto:
-
-git push origin :refs/tags/versão-da-tag
-Concluindo
