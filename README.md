@@ -156,7 +156,8 @@ Uma insue é uma tarefa criada no site. Asim, a mudança ficará lincada à tare
 Caso tenha feito um commit e deseje desfaze-lo, digite:
 
 git reset HEAD~1
-Isso fará com que o commit último commit seja desfeito, caso deseje voltar mais commits basta mudar o número que vem depois do head~. O número corresponde ao número de commits que irá voltar.
+Isso fará com que o commit último commit seja desfeito, caso deseje voltar mais commits basta mudar o número que vem depois do head~. 
+O número corresponde ao número de commits que irá voltar.
 
 Voltando dois: git reset HEAD~2
 
