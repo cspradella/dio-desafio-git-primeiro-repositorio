@@ -1,7 +1,7 @@
 ## 📚Desafio de Projeto sobre Git/Github da DIO
-Repositório criado para o desafio de projeto, incluir todas as atividades da Digital Innovation One - DIO, executados pelo Bootcamp Eduzz Fullsatck Developer.
+Repositório criado para o desafio de projeto
 
-🔑Algumas Coisas Importantes
+# 🔑Algumas Coisas Importantes
 Comandos importantes do Prompt de Comando (também utilizado no Git):
 
 cls(win), clear(git, linux) - para apagar todo o histórico de comandos do prompt;
@@ -18,7 +18,7 @@ start(win, git, linux) - inicia um arquivo executável de qualquer tipo;
 
 TAB - Sim, a tecla TAB tem a incrível função de abreviar algo que você deseja escrever, extremamente útil e vai agilizar muito a sua vida!
 
-Comandos de iniciação do Git:
+# Comandos de iniciação do Git:
 
 git init - inicia o versionamento na pasta em que estiver;
 git config --global user.email "email" - configura o ambiente de versionamento para todos os repositórios, com essa identificação de e-mail; em caso da necessidade de alterar isso posteriormente, use git config --global unset user.email;
