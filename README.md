@@ -75,9 +75,10 @@ Clique com o botão direito do mouse e selecione a opção git bash
 
 Para ter seu repositório local sempre sincronizado/atualizado com o repositório online, você precisará puxar as alterações:
 
-Para isso, digite o comando: git pull origin master
-O master significa que o projeto é master. Ele pode estar como Alpha ou outro nome. Caso não tenha certeza, é possível dar pull com apenas o comando git pull origin
+Para isso, digite o comando: git pull origin main
 
+O main significa que o projeto é main. Ele pode estar como Alpha ou outro nome. Caso não tenha certeza, é possível dar pull com apenas o comando 
+git pull origin
 
 
 ### 3. Enviar os arquivos ao repositório remotamente
