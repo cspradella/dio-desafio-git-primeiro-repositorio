@@ -85,7 +85,7 @@ git pull origin
 
 git remote add origin git@github.com:username/projeto.git
 
-git push -u origin master
+git push -u origin main
 
 
 
@@ -123,7 +123,7 @@ Para adicionar arquivos à lista para commit:
 
 Para adicionar todos os arquivos que modificou, digite o código:
 git add .
-Para adicionar a lista de commit os arquivos que foram escluídos:
+Para adicionar a lista de commit os arquivos que foram excluídos:
 git add -u
 Para adicionar algum arquivo específico:
 git add nome-do-arquivo.xx
